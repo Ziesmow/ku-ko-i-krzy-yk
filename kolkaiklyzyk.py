@@ -31,67 +31,147 @@ def printkolka (kolka):
             elif key == "a3" :
                 print()
         
-def ruchpla(kloka):
-    wyb = input("gdzie chcesz postawić x:")
+def ruchplax(kloka):
+    wyb = input("gdzie chcesz postawić X:")
     if wyb == 'a1' :
-        kolka['a1'] = 1
+        if kolka["a1"] == 0:
+            kolka['a1'] = 1
+        else :
+            print("njie możesz postawić tu Znaku")
     elif wyb == 'a2' :
-        kolka['a2'] = 1
+        if kolka["a2"] == 0:
+            kolka['a2'] = 1
+        else :
+            print("njie możesz postawić tu Znaku")
     elif wyb == 'a3' :
-        kolka['a3'] = 1
+        if kolka["a3"] == 0:
+            kolka['a3'] = 1
+        else :
+            print("njie możesz postawić tu Znaku")
     elif wyb == 'b1' :
-        kolka['b1'] = 1
+        if kolka["b1"] == 0:
+            kolka['b1'] = 1
+        else :
+            print("njie możesz postawić tu Znaku")
     elif wyb == 'b2' :
-        kolka['b2'] = 1
+        if kolka["b2"] == 0:
+            kolka['b2'] = 1
+        else :
+            print("njie możesz postawić tu Znaku")
     elif wyb == 'b3' :
-        kolka['b3'] = 1
+        if kolka["b3"] == 0:
+            kolka['b3'] = 1
+        else :
+            print("njie możesz postawić tu Znaku")
     elif wyb == 'c1' :
-        kolka['c1'] = 1
+        if kolka["c1"] == 0:
+            kolka['c1'] = 1
+        else :
+            print("njie możesz postawić tu Znaku")
     elif wyb == 'c2' :
-        kolka['c2'] = 1
+        if kolka["c2"] == 0:
+            kolka['c2'] = 1
+        else :
+            print("njie możesz postawić tu Znaku")
     elif wyb == 'c3' :
-        kolka['c3'] = 1
+        if kolka["c3"] == 0:
+            kolka['c3'] = 1
+        else :
+            print("njie możesz postawić tu Znaku")
     else :
         print(f"nie ma takiego pola jak {wyb}")
-        
+
+def ruchplao(kloka):
+    wyb = input("gdzie chcesz postawić O:")
+    if wyb == 'a1' :
+        if kolka["a1"] == 0:
+            kolka['a1'] = 2
+        else :
+            print("njie możesz postawić tu Znaku")
+    elif wyb == 'a2' :
+        if kolka["a2"] == 0:
+            kolka['a2'] = 2
+        else :
+            print("njie możesz postawić tu Znaku")
+    elif wyb == 'a3' :
+        if kolka["a3"] == 0:
+            kolka['a3'] = 2
+        else :
+            print("njie możesz postawić tu Znaku")
+    elif wyb == 'b1' :
+        if kolka["b1"] == 0:
+            kolka['b1'] = 2
+        else :
+            print("njie możesz postawić tu Znaku")
+    elif wyb == 'b2' :
+        if kolka["b2"] == 0:
+            kolka['b2'] = 2
+        else :
+            print("njie możesz postawić tu Znaku")
+    elif wyb == 'b3' :
+        if kolka["b3"] == 0:
+            kolka['b3'] = 2
+        else :
+            print("njie możesz postawić tu Znaku")
+    elif wyb == 'c1' :
+        if kolka["c1"] == 0:
+            kolka['c1'] = 2
+        else :
+            print("njie możesz postawić tu Znaku")
+    elif wyb == 'c2' :
+        if kolka["c2"] == 0:
+            kolka['c2'] = 2
+        else :
+            print("njie możesz postawić tu Znaku")
+    elif wyb == 'c3' :
+        if kolka["c3"] == 0:
+            kolka['c3'] = 2
+        else :
+            print("njie możesz postawić tu Znaku")
+    else :
+        print(f"nie ma takiego pola jak {wyb}")
+
 def wynikx(kolka):
     for i in wyniki:
         if kolka["a1"] == i and  kolka["a2"] == i and  kolka["a3"] == i:
             print(f"wygrałeś {lsaosud[i-1]}")
             kolka["wynik"] = 6
-        elif kolka["a1"] == 1 and  kolka["b1"] == 1 and  kolka["c1"] == 1:
-            print("wygrałeś x")
+        elif kolka["a1"] == i and  kolka["b1"] == i and  kolka["c1"] == i:
+            print(f"wygrałeś {lsaosud[i-1]}")
             kolka["wynik"] = 6
-        elif kolka["a1"] == 1 and  kolka["b2"] == 1 and  kolka["c3"] == 1:
-            print("wygrałeś x")
+        elif kolka["a1"] == i and  kolka["b2"] == i and  kolka["c3"] == i:
+            print(f"wygrałeś {lsaosud[i-1]}")
             kolka["wynik"] = 6
-        elif kolka["a2"] == 1 and  kolka["b2"] == 1 and  kolka["c2"] == 1:
-            print("wygrałeś x")
+        elif kolka["a2"] == i and  kolka["b2"] == i and  kolka["c2"] == i:
+            print(f"wygrałeś {lsaosud[i-1]}")
             kolka["wynik"] = 6
-        elif kolka["b1"] == 1 and  kolka["b2"] == 1 and  kolka["b3"] == 1:
-            print("wygrałeś x")
+        elif kolka["b1"] == i and  kolka["b2"] == i and  kolka["b3"] == i:
+            print(f"wygrałeś {lsaosud[i-1]}")
             kolka["wynik"] = 6
-        elif kolka["c1"] == 1 and  kolka["c2"] == 1 and  kolka["c3"] == 1:
-            print("wygrałeś x")
+        elif kolka["c1"] == i and  kolka["c2"] == i and  kolka["c3"] == i:
+            print(f"wygrałeś {lsaosud[i-1]}")
             kolka["wynik"] = 6
-        elif kolka["a3"] == 1 and  kolka["b3"] == 1 and  kolka["c3"] == 1:
-            print("wygrałeś x")
+        elif kolka["a3"] == i and  kolka["b3"] == i and  kolka["c3"] == i:
+            print(f"wygrałeś {lsaosud[i-1]}")
             kolka["wynik"] = 6
-        elif kolka["a3"] == 1 and  kolka["b2"] == 1 and  kolka["c1"] == 1:
-            print("wygrałeś x")
+        elif kolka["a3"] == i and  kolka["b2"] == i and  kolka["c1"] == i:
+            print(f"wygrałeś {lsaosud[i-1]}")
             kolka["wynik"] = 6
-
-
-
 
 while n < 1 :
-    wynikx(kolka)
     printkolka(kolka)
+    wynikx(kolka)
     if kolka["wynik"] == 6:
         break
     print()
-    ruchpla(kolka)
-
+    ruchplao(kolka)
+    printkolka(kolka)
+    print()
+    wynikx(kolka)
+    if kolka["wynik"] == 6:
+        break
+    print()
+    ruchplax(kolka)
 print()
 
 
