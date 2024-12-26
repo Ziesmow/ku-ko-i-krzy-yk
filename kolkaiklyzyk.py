@@ -9,10 +9,13 @@ kolka = {
     'c1' : 0,
     'c2' : 0,
     'c3' : 0,
+    "wynik" : 5,
 }
 
+n = 0
 def printkolka (kolka):
         for key , value in kolka.items():
+
             if value == 0 :
                 print("   |", end='')
             elif value == 1 :
@@ -49,13 +52,51 @@ def ruchpla(kloka):
     else :
         print(f"nie ma takiego pola jak {wyb}")
         
+def wynikx(kolka):
+    if kolka["a1"] == 1 and  kolka["a2"] == 1 and  kolka["a3"] == 1:
+        print("wygrałeś x")
+        kolka["wynik"] = 6
+    elif kolka["a1"] == 1 and  kolka["b1"] == 1 and  kolka["c1"] == 1:
+        print("wygrałeś x")
+        wynik = 1
+        return wynik
+    elif kolka["a1"] == 1 and  kolka["b2"] == 1 and  kolka["c3"] == 1:
+        print("wygrałeś x")
+        wynik = 1
+        return wynik
+    elif kolka["a2"] == 1 and  kolka["b2"] == 1 and  kolka["c2"] == 1:
+        print("wygrałeś x")
+        wynik = 1
+        return wynik
+    elif kolka["b1"] == 1 and  kolka["b2"] == 1 and  kolka["b3"] == 1:
+        print("wygrałeś x")
+        wynik = 1
+        return wynik
+    elif kolka["c1"] == 1 and  kolka["c2"] == 1 and  kolka["c3"] == 1:
+        print("wygrałeś x")
+        wynik = 1
+        return wynik
+    elif kolka["a3"] == 1 and  kolka["b3"] == 1 and  kolka["c3"] == 1:
+        print("wygrałeś x")
+        wynik = 1
+        return wynik
+    elif kolka["a3"] == 1 and  kolka["b2"] == 1 and  kolka["c1"] == 1:
+        print("wygrałeś x")
+        wynik = 1
+        return wynik
+    
 
 
 
-while True :
+
+while n < 1 :
+    wynikx(kolka)
     printkolka(kolka)
+    if kolka["wynik"] == 6:
+        break
     print()
     ruchpla(kolka)
+
 
 
 
