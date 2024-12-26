@@ -15,6 +15,8 @@ kolka = {
 wyniki = [1 , 2]
 lsaosud = ["X", "O"]
 n = 0
+
+
 def printkolka (kolka):
         for key , value in kolka.items():
 
@@ -157,6 +159,23 @@ def wynikx(kolka):
         elif kolka["a3"] == i and  kolka["b2"] == i and  kolka["c1"] == i:
             print(f"wygrałeś {lsaosud[i-1]}")
             kolka["wynik"] = 6
+    zera = []
+    for i , j in kolka.items():
+        if i != "wynik" :
+            if j == 0 :
+                zera.append(j + 23)
+            else:
+                pass
+
+    if len(zera) > 0 :
+        pass 
+    if len(zera) == 0:
+        print("nikt nie wygrał")
+        kolka["wynik"] = 6
+            
+        
+            
+        
 
 while n < 1 :
     printkolka(kolka)
