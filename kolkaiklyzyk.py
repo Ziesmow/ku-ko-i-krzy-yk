@@ -1,39 +1,40 @@
 
-a1 = 0
-a2 = 0
-a3 = 0
-b1 = 0
-b2 = 0
-b3 = 1
-c1 = 0
-c2 = 0
-c3 = 0
-
-kolkaiklyk = [
-    a1 ,
-    a2 ,
-    a3 ,
-    b1 ,
-    b2 ,
-    b3 ,
-    c1 ,
-    c2 ,
-    c3 ,
-]
+kolka = {
+    'a1' : 1,
+    'a2' : 0,
+    'a3' : 2,
+    'b1' : 2,
+    'b2' : 1,
+    'b3' : 1,
+    'c1' : 0,
+    'c2' : 2,
+    'c3' : 1,
+}
 
 
 
 
-def printkolka ():
-    for abc in kolkaiklyk:
-        if abc == 0 :
-            print("     |")
-        elif abc == 1 :
-            print("  / |")
+def printkolka (kolka):
+        for key , value in kolka.items():
+            if value == 0 :
+                print("   |", end='')
+            elif value == 1 :
+                print(" x |", end='')
+            elif value == 2 :
+                print(" 0 |", end='') 
+            if key == "a3" :
+                print()
+            elif key == "b3" :
+                print()
+            elif key == "a3" :
+                print()
+        
+
+        
 
 
-
-printkolka()
+printkolka(kolka)
+print()
 
 
 
