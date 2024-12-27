@@ -4,12 +4,22 @@ plansza = {
     'c1' : 0, 'c2' : 0, 'c3' : 0,
     "zwycięstwo" : 5,
 }
+mozzwy = [
+    ['a1', 'a2', 'a3'],
+    ['a1', 'b1', 'c1'],
+    ['a1', 'b2', 'c3'],
+    ['a2', 'b2', 'c2'],
+    ['b1', 'b2', 'b3'],
+    ['c1', 'c2', 'c3'],
+    ['a3', 'b3', 'c3'],
+    ['a3', 'b2', 'c1'],
+]
 lsabc = ['a', 'b', 'c',]
 ls123 = ['1', '2', '3']
 zajete = [1, 2]
 lsosub = ["O", "X"]
 tura = 1
-n = 2
+
 
 def printkolka (plansza,):
         for key , value in plansza.items():
@@ -43,6 +53,31 @@ def ruchypl(plansza,tura):
                 elif tura % 2 != 0 :
                     plansza[abc + l123] = 1
                   
+def wynix2(plansza, mozzwy):
+    for jeddwa in zajete:
+        wynik = []
+        for key, value in plansze.items() :
+            if value == jeddwa :
+                wynik.append(key)
+    wynik2 = []
+    for listyzwy in mozzwy :
+        for zakre in wynik :
+            if zakre is  listyzwy :
+                wynik2.append(zakre)
+        if wynik2 == listyzwy :
+            print("wygrałeś ")
+            plansza["zwycięstwo"] = 6
+    
+
+
+            
+        
+            
+
+
+
+
+
 def wynix(plansza):
     for i in zajete :
         if plansza["a1"] == i and plansza["a2"] == i and plansza["a3"] == i :
