@@ -20,7 +20,6 @@ zajete = [1, 2]
 lsosub = ["O", "X"]
 tura = 1
 
-
 def printkolka (plansza,):
         for key , value in plansza.items():
             if value == 0 :
@@ -54,56 +53,25 @@ def ruchypl(plansza,tura):
                     plansza[abc + l123] = 1
                   
 def wynix2(plansza, mozzwy):
-    for jeddwa in zajete:
-        wynik = []
-        for key, value in plansze.items() :
-            if value == jeddwa :
-                wynik.append(key)
-    wynik2 = []
+    wynik = []
+    if tura % 2 == 0 :
+        jeddwa = 2
+    else :
+        jeddwa = 1
+    for key, value in plansza.items() :
+        if value == jeddwa :
+            wynik.append(key)
     for listyzwy in mozzwy :
+        wynik2 = []
         for zakre in wynik :
-            if zakre is  listyzwy :
+            if zakre in  listyzwy :
                 wynik2.append(zakre)
+         
         if wynik2 == listyzwy :
-            print("wygrałeś ")
-            plansza["zwycięstwo"] = 6
-    
-
-
-            
-        
-            
-
-
-
-
-
-def wynix(plansza):
-    for i in zajete :
-        if plansza["a1"] == i and plansza["a2"] == i and plansza["a3"] == i :
-            plansza["zwycięstwo"] = 6
-            break
-        elif plansza["a1"] == i and plansza["b1"] == i and plansza["c1"] == i :
-            plansza["zwycięstwo"] = 6
-            break
-        elif plansza["a1"] == i and plansza["b2"] == i and plansza["c3"] == i :
-            plansza["zwycięstwo"] = 6
-            break
-        elif plansza["a2"] == i and plansza["b2"] == i and plansza["c2"] == i :
-            plansza["zwycięstwo"] = 6
-            break
-        elif plansza["b1"] == i and plansza["b2"] == i and plansza["b3"] == i :
-            plansza["zwycięstwo"] = 6
-            break
-        elif plansza["c1"] == i and plansza["c2"] == i and plansza["c3"] == i :
-            plansza["zwycięstwo"] = 6
-            break
-        elif plansza["a3"] == i and plansza["b3"] == i and plansza["c3"] == i :
-            plansza["zwycięstwo"] = 6
-            break
-        elif plansza["a3"] == i and plansza["b2"] == i and plansza["c1"] == i :
-            plansza["zwycięstwo"] = 6
-            break
+            if tura % 2 == 0:
+                plansza["zwycięstwo"] = 6
+            else :
+                plansza["zwycięstwo"] = 6
         zera = []
         for key , value in plansza.items() :
             if key != "zwycięstwo" :
@@ -120,7 +88,7 @@ printkolka(plansza)
 while tura > 0:
     ruchypl(plansza,tura)
     printkolka(plansza)
-    wynix(plansza)
+    wynix2(plansza, mozzwy)
     if plansza["zwycięstwo"] == 6:
         print(f"wygrał gracz który grał {lsosub[tura % 2]}")
         break
