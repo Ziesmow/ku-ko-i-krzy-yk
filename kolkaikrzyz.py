@@ -37,9 +37,9 @@ def printkolka (plansza,):
 
 def ruchypl(plansza,tura):
     if tura % 2 == 0 :
-        print("tura gracza który gra O")
+        print("\n tura gracza który gra O")
     elif tura % 2 != 0 :
-        print("tura gracza który gra X")
+        print("\n tura gracza który gra X")
     pole = input("podaj pole na jakim hcesz postawić znak ")
     for abc in lsabc :
         for l123 in ls123 :
@@ -90,9 +90,9 @@ while tura > 0:
     printkolka(plansza)
     wynix2(plansza, mozzwy)
     if plansza["zwycięstwo"] == 6:
-        print(f"wygrał gracz który grał {lsosub[tura % 2]}")
+        print(f" \n wygrał gracz który grał {lsosub[tura % 2]}")
         break
     elif plansza["zwycięstwo"] == 7 :
-        print("nikt nie wygrał")
+        print("\n nikt nie wygrał")
         break
     tura +=1
